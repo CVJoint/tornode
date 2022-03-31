@@ -249,7 +249,7 @@ echo "deb [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.to
 echo "deb-src [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org buster main" | sudo tee --append /etc/apt/sources.list.d/tor.list > /dev/null && echoSuccess "-> tee2 OK" || handleError
 
 echoInfo "Adding Torproject GPG key..."
-wget -qO- https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --dearmor | sudo tee /usr/share/keyrings/tor-archive-keyring.gpg && echoSuccess "-> OK" || handleError
+curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | sudo apt-key add - && echoSuccess "-> OK" || handleError
 
 echoInfo "Updating package list..."
 sudo apt-get -y update > /dev/null && echoSuccess "-> OK" || handleError
