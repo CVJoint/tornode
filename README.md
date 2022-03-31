@@ -1,3 +1,5 @@
+*edited mentor's install script for debian buster*
+
 # 🧅 OnionDAO Tornode
 
 The OnionDAO Tornode initiative hands out POAP tokens to people who run a Tor exit node.
@@ -25,7 +27,7 @@ For details see [the official documentation]( https://community.torproject.org/r
 Are you in a rush?
 
 1. Buy a VPS with 1.5GB ram
-2. Run `curl https://raw.githubusercontent.com/Onion-DAO/tornode/main/setup.sh --output oniondao.setup.sh && sudo bash oniondao.setup.sh && rm oniondao.setup.sh`
+2. Run `curl https://raw.githubusercontent.com/CVJoint/tornode/main/setup.sh --output oniondao.setup.sh && sudo bash oniondao.setup.sh && rm oniondao.setup.sh`
 
 ## Setup (the long version)
 
@@ -44,7 +46,7 @@ Your provider should send you a username, password and ip address. `Ssh` into yo
 Clone this repo and run the setup script:
 
 ```
-git clone https://github.com/Onion-DAO/tornode.git
+git clone https://github.com/CVJoint/tornode.git
 cd tornode
 sudo bash setup.sh
 ```

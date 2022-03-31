@@ -8,7 +8,7 @@ mkdir -p "$oniondaofolder"
 
 # Write OnionDAO function as executable
 echo -e "\nCloning OnionDAO repository to $oniondaofolder"
-git clone --depth 1 https://github.com/Onion-DAO/tornode.git "$oniondaofolder" &> /dev/null
+git clone --depth 1 https://github.com/CVJoint/tornode.git "$oniondaofolder" &> /dev/null
 echo "Writing executable to $binfolder/oniondao"
 sudo cp $oniondaofolder/oniondao.sh $binfolder/oniondao
 sudo chmod 755 $binfolder/oniondao
